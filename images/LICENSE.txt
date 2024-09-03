@@ -1,4 +1,6 @@
+Thanks to Nisar Hassan Naqvi
 
+----------------------------------------------------------------------------------
 MIT License
 
 Copyright (c) 2020 Nisar Hassan Naqvi
