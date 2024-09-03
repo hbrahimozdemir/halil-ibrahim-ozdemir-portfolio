@@ -180,26 +180,29 @@ Proficient in C++, Unreal Engine, and Unity, I combine technical skills with a d
 
   <!-- ***** Footer ***** -->
 
- <footer role="contentinfo" class="footer">
+  <footer role="contentinfo" class="footer">
     <div class="row">
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://github.com/hbrahimozdemir" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a href="https://github.com/hbrahimozdemir" title="Link to GitHub Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/halil-ibrahim-özdemir-280542223/" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          <a href="https://www.linkedin.com/in/halil-ibrahim-özdemir-280542223/" title="Link to LinkedIn Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
           </a>
         </li>
       </ul>
-
+  
       <p>
-        &copy; 2024 <a href="https://github.com/hbrahimozdemir" class="link">Halil İbrahim Özdemir</a>.
+        &copy; <span id="year"></span> <a href="https://www.linkedin.com/in/halil-ibrahim-özdemir-280542223/" class="link">Halil İbrahim Özdemir</a>. All rights reserved.
       </p>
     </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </footer>
-</body>
-
-</html>
+  </body>
+  </html>
+  
