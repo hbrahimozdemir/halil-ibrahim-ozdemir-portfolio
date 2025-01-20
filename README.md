@@ -1,4 +1,4 @@
-# Halil İbrahim Özdemir - Personal Portfolio
+# Halil İbrahim Özdemir - Personal Portfolio 
 
 Welcome to my personal portfolio repository! This project showcases my work as a Computer Engineer and Game Developer. Here, you'll find information about my projects, experiences, and how to get in touch with me.
 
@@ -20,4 +20,4 @@ This portfolio website is designed to present my professional background, includ
 - CSS
 
 
-- I used @nisarhassan12 Template For Create This Page 
+
