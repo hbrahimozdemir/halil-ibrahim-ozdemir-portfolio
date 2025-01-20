@@ -439,7 +439,14 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Work ----- */
 /* --------------------------------------- */
-
+.work__box img.work__image {
+    border-radius: 10px; 
+    transition: transform 0.3s ease;
+  }
+  
+  .work__box img.work__image:hover {
+    transform: scale(1.05); 
+  }
 .work__box {
     display: flex;
     align-items: center;
