@@ -426,6 +426,50 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-medium);
 }
 
+
+.header__photo-container {
+    position: absolute;
+    bottom: 25%; 
+    right: 5%; 
+    z-index: 5;
+  }
+  
+  /* Fotoğraf Stili */
+  .header__photo-small {
+    width: 24rem; /* Boyut */
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .header__photo-small:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  .header__social-links {
+    position: absolute;
+    bottom: 15%; 
+    right: 5%;
+    display: flex;
+    gap: 2rem; 
+    z-index: 5;
+  }
+  
+  .header__social-icon {
+    width: 4rem; 
+    height: auto;
+    transition: transform 0.3s ease; 
+  }
+  
+  .header__social-icon:hover {
+    transform: scale(1.2); 
+  }
+  
+  
+  
 @media(max-width: 500px) {
     .header {
         text-align: center;
