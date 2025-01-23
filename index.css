@@ -667,33 +667,33 @@ body:not(.user-is-tabbing) a:focus {
     } 
 }
 @media (max-width: 768px) {
-    /* Profil Fotoğrafını Daha Aşağı Al */
+  
     .header__photo-container {
       position: absolute;
-      bottom: 2%; /* Fotoğrafı biraz daha aşağı taşı */
-      left: 50%; /* Ortala */
-      transform: translateX(-50%); /* Gerçek ortalama */
+      bottom: 2%; 
+      left: 50%; 
+      transform: translateX(-50%); 
     }
   
-    /* Profil Fotoğrafını Küçült */
+
     .header__photo-small {
-      width: 15rem; /* Mobilde boyutu küçült */
-      height: auto; /* Oranı koru */
+      width: 15rem; 
+      height: auto; 
     }
   
-    /* Sosyal Medya İkonlarını Sağ ve Sol Köşeye Taşı */
+  
     .header__social-links {
       position: absolute;
-      bottom: 2%; /* Ekranın altına hizala */
-      left: 0; /* Sol başa taşı */
-      right: 0; /* Sağ başa taşı */
+      bottom: 2%; 
+      left: 0; 
+      right: 0; 
       display: flex;
-      justify-content: space-between; /* İkonları sağ ve sola yerleştir */
-      padding: 0 1.5rem; /* Kenarlara boşluk ekle */
+      justify-content: space-between;
+      padding: 0 1.5rem; 
     }
   
     .header__social-icon {
-      width: 3.5rem; /* Mobilde ikon boyutunu biraz küçült */
+      width: 3.5rem; 
       height: auto;
     }
   }
