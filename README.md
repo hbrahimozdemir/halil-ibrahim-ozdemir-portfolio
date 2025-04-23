@@ -1,5 +1,7 @@
 # Halil İbrahim Özdemir - Personal Portfolio 
 
+https://hbrahimozdemir.github.io/halil-ibrahim-ozdemir-portfolio/
+
 Welcome to my personal portfolio repository! This project showcases my work as a Computer Engineer and Game Developer. Here, you'll find information about my projects, experiences, and how to get in touch with me.
 
 ## Project Overview
