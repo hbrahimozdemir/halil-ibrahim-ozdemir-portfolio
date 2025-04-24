@@ -937,35 +937,104 @@ img {
     box-shadow: var(--glow-primary);
 }
 
-.character-stats {
+/* Character Skills Styling */
+.character-skills {
     padding: 20px;
-}
-
-.stat {
-    margin-bottom: 15px;
-}
-
-.stat-name {
-    display: block;
+  }
+  
+  .skills-title {
     font-family: var(--font-primary);
     font-size: var(--font-size-small);
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     color: var(--color-text);
-}
-
-.stat-bar {
-    height: 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .skills-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  }
+  
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .skill-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(18, 20, 32, 0.8);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-secondary);
+    color: var(--color-text);
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    position: relative;
     overflow: hidden;
-}
-
-.stat-fill {
+  }
+  
+  .skill-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
     height: 100%;
-    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
-    border-radius: 5px;
-    transition: width 1s ease;
-}
+    background: var(--color-primary);
+  }
+  
+  .skill-badge:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glow-secondary);
+    border-color: var(--color-primary);
+  }
+  
+  .skill-badge i {
+    color: var(--color-primary);
+    font-size: 1.6rem;
+  }
+  
+  /* Alternating badge colors for visual interest */
+  .skill-badge:nth-child(odd) {
+    border-color: var(--color-primary);
+  }
+  
+  .skill-badge:nth-child(odd)::before {
+    background: var(--color-secondary);
+  }
+  
+  .skill-badge:nth-child(odd) i {
+    color: var(--color-secondary);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 500px) {
+    .skills-container {
+      gap: 8px;
+    }
+    
+    .skill-badge {
+      padding: 5px 10px;
+      font-size: 1.3rem;
+    }
+    
+    .skill-badge i {
+      font-size: 1.4rem;
+    }
+  }
 
 .about__text {
     background: var(--color-card-bg);
