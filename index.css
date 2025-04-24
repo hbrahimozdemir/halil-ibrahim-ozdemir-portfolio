@@ -970,7 +970,16 @@ img {
     gap: 10px;
     justify-content: center;
   }
-  
+  .text-icon {
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.6rem;
+  }
+  .skill-icon {
+    width: 16px;  /* Match the size of your other icons */
+    height: 16px;
+    vertical-align: middle;
+  }
   .skill-badge {
     display: flex;
     align-items: center;
