@@ -1077,154 +1077,272 @@ img {
     color: var(--color-secondary);
 }
 
-/* Contact Section */
+/* Contact Section with Tetris Mode */
 .contact__container {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: var(--gutter-normal);
+    gap: 20px;
     align-items: center;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .contact__container {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
-}
-
-.contact__console {
+  }
+  
+  .contact__console {
     background: #1a1b26;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border: 1px solid #2d2d3a;
-}
-
-.console-header {
+  }
+  
+  .console-header {
     background: #16161e;
     padding: 10px 15px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #2d2d3a;
-}
-
-.console-buttons {
+  }
+  
+  .console-buttons {
     display: flex;
     gap: 8px;
     margin-right: 15px;
-}
-
-.console-button {
+  }
+  
+  .console-button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--color-primary);
-}
-
-.console-button:nth-child(2) {
-    background: var(--color-tertiary);
-}
-
-.console-button:nth-child(3) {
-    background: var(--color-secondary);
-}
-
-.console-title {
+  }
+  
+  .console-button:nth-child(1) {
+    background: #ff5f56;
+  }
+  
+  .console-button:nth-child(2) {
+    background: #ffbd2e;
+  }
+  
+  .console-button:nth-child(3) {
+    background: #27c93f;
+  }
+  
+  .console-title {
     font-family: 'Monaco', monospace;
-    font-size: 1.4rem;
-    color: var(--color-text-alt);
-}
-
-.console-body {
+    font-size: 14px;
+    color: #a9b1d6;
+    flex-grow: 1;
+  }
+  
+  .console-actions {
+    margin-left: auto;
+  }
+  
+  .console-action-btn {
+    background: #2d2d3a;
+    color: #ff5f56;
+    border: 1px solid #ff5f56;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-family: 'Monaco', monospace;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .console-action-btn:hover {
+    background: #ff5f56;
+    color: #16161e;
+  }
+  
+  .console-body {
     padding: 20px;
     font-family: 'Monaco', monospace;
-    font-size: 1.4rem;
+    font-size: 14px;
     line-height: 1.6;
-    color: var(--color-text);
+    color: #a9b1d6;
     height: 300px;
     overflow-y: auto;
-}
-
-.console-line {
+  }
+  
+  .console-line {
     margin-bottom: 10px;
     display: flex;
-}
-
-.console-prompt {
-    color: var(--color-secondary);
+  }
+  
+  .console-prompt {
+    color: #27c93f;
     margin-right: 10px;
-}
-
-.console-command {
-    color: var(--color-text);
-}
-
-.console-response {
-    color: var(--color-text-alt);
-    margin-bottom: 15px;
-    padding-left: 20px;
-}
-
-.console-cursor {
+  }
+  
+  .console-text {
+    color: #a9b1d6;
+  }
+  
+  .console-output {
+    color: #a9b1d6;
+  }
+  
+  .console-output a {
+    color: #ffbd2e;
+    text-decoration: none;
+  }
+  
+  .console-output a:hover {
+    text-decoration: underline;
+  }
+  
+  .console-cursor {
     display: inline-block;
     width: 10px;
     height: 15px;
-    background-color: var(--color-primary);
+    background-color: #ff5f56;
     animation: blink-cursor 1s infinite;
     vertical-align: middle;
-}
-
-@keyframes blink-cursor {
+  }
+  
+  @keyframes blink-cursor {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
-}
-
-.contact__form {
-    background: var(--color-card-bg);
-    border-radius: var(--border-radius);
-    padding: var(--gutter-normal);
-    border: var(--border-light);
-}
-
-.contact__form-field {
-    margin-bottom: 20px;
-}
-
-.contact__form-label {
-    display: block;
-    font-family: var(--font-primary);
-    font-size: var(--font-size-small);
-    margin-bottom: 10px;
-    color: var(--color-text);
-}
-
-.contact__form-input {
-    width: 100%;
-    background: rgba(24, 24, 36, 0.7);
-    border: 1px solid rgba(77, 238, 234, 0.3);
+  }
+  
+  /* Tetris Specific Styles */
+  .tetris-container {
+    display: flex;
+    padding: 10px;
+    height: 400px;
+  }
+  
+  .tetris-board {
+    width: 200px;
+    height: 380px;
+    background-color: #0f0f17;
+    border: 1px solid #2d2d3a;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+  }
+  
+  .tetris-sidebar {
+    margin-left: 20px;
+    width: 120px;
+  }
+  
+  .tetris-next {
+    background-color: #16161e;
+    border: 1px solid #2d2d3a;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .tetris-next h3,
+  .tetris-score h3,
+  .tetris-level h3,
+  .tetris-lines h3,
+  .tetris-controls h3 {
+    color: #ff5f56;
+    font-size: 14px;
+    margin: 0 0 10px 0;
+  }
+  
+  .tetris-next-piece {
+    width: 80px;
+    height: 80px;
+    background-color: #0f0f17;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .tetris-score,
+  .tetris-level,
+  .tetris-lines {
+    margin-bottom: 15px;
+  }
+  
+  .tetris-controls {
+    border: 1px solid #2d2d3a;
+    padding: 10px;
+    background-color: #16161e;
+  }
+  
+  .tetris-controls p {
+    margin: 5px 0;
+    font-size: 12px;
+  }
+  
+  .tetris-cell {
+    border: 1px solid rgba(45, 45, 58, 0.3);
+  }
+  
+  .tetris-cell.filled {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .tetris-cell.piece-i {
+    background-color: #00f0f0;
+  }
+  
+  .tetris-cell.piece-j {
+    background-color: #0000f0;
+  }
+  
+  .tetris-cell.piece-l {
+    background-color: #f0a000;
+  }
+  
+  .tetris-cell.piece-o {
+    background-color: #f0f000;
+  }
+  
+  .tetris-cell.piece-s {
+    background-color: #00f000;
+  }
+  
+  .tetris-cell.piece-t {
+    background-color: #a000f0;
+  }
+  
+  .tetris-cell.piece-z {
+    background-color: #f00000;
+  }
+  
+  .btn.btn--neon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #ff5f56;
+    border: 1px solid #ff5f56;
     border-radius: 5px;
-    color: var(--color-text);
-    padding: 12px 15px;
-    font-family: var(--font-secondary);
-    font-size: var(--font-size-small);
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
     transition: all 0.3s;
-}
-
-.contact__form-input:focus {
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 5px rgba(77, 238, 234, 0.5);
-    outline: none;
-}
-
-.contact__form-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.contact__btn {
-    width: 100%;
-    text-align: center;
-}
-
+  }
+  
+  .btn.btn--neon i {
+    margin-right: 8px;
+  }
+  
+  .btn.btn--neon:hover {
+    background-color: #ff5f56;
+    color: #16161e;
+    box-shadow: 0 0 10px rgba(255, 95, 86, 0.5);
+  }
+  
+  .contact__info {
+    color: #a9b1d6;
+  }
+  
+  .contact__info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
 /* Footer */
 .footer {
     background: var(--color-bg-alt);

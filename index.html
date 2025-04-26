@@ -532,62 +532,101 @@
       </div>
     </section>
 
-    <!-- Contact Section with Game Console Style -->
-    <section class="contact" id="contact">
-      <div class="section-header">
-        <h2 class="section-title"><span class="highlight">[</span> Get in Touch <span class="highlight">]</span></h2>
-        <p class="section-subtitle">Let's collaborate on your next game project</p>
-      </div>
-      
-      <div class="row">
-        <div class="contact__container">
-          <div class="contact__console">
-            <div class="console-header">
-              <div class="console-buttons">
-                <span class="console-button"></span>
-                <span class="console-button"></span>
-                <span class="console-button"></span>
-              </div>
-              <div class="console-title">terminal</div>
-            </div>
-            <div class="console-body">
-              <div class="console-line">
-                <span class="console-prompt">user@game-dev:~$</span> 
-                <span class="console-text">contact --info halil</span>
-              </div>
-              <div class="console-line">
-                <span class="console-output">Processing request...</span>
-              </div>
-              <div class="console-line">
-                <span class="console-output">Name: Halil İbrahim Özdemir</span>
-              </div>
-              <div class="console-line">
-                <span class="console-output">Role: Game Developer / Computer Engineer</span>
-              </div>
-              <div class="console-line">
-                <span class="console-output">Email: <a href="mailto:hbrahim.ozdemir@gmail.com">hbrahim.ozdemir@gmail.com</a></span>
-              </div>
-              <div class="console-line">
-                <span class="console-output">Location: Ankara, Turkey</span>
-              </div>
-              <div class="console-line">
-                <span class="console-prompt">user@game-dev:~$</span> 
-                <span class="console-cursor"></span>
-              </div>
-            </div>
+<!-- Contact Section with Game Console Style and Tetris Mode -->
+<section class="contact" id="contact">
+  <div class="section-header">
+    <h2 class="section-title"><span class="highlight">[</span> Get in Touch <span class="highlight">]</span></h2>
+    <p class="section-subtitle">Let's collaborate on your next game project</p>
+  </div>
+  
+  <div class="row">
+    <div class="contact__container">
+      <div class="contact__console">
+        <div class="console-header">
+          <div class="console-buttons">
+            <span class="console-button"></span>
+            <span class="console-button"></span>
+            <span class="console-button"></span>
           </div>
-          
-          <div class="contact__info">
-            <p>
-              If you have any questions, project inquiries, or just want to connect, feel free to reach out. I'm always open to new opportunities and collaborations in game development and software engineering.
-            </p>
-            <a href="mailto:hbrahim.ozdemir@gmail.com" class="btn btn--neon">
-              <i class="fas fa-envelope"></i> Send Email
-            </a>
+          <div class="console-title">terminal</div>
+          <div class="console-actions">
+            <button id="tetris-toggle" class="console-action-btn">Play Tetris</button>
+          </div>
+        </div>
+        
+        <!-- Contact Info Terminal View -->
+        <div id="terminal-view" class="console-body">
+          <div class="console-line">
+            <span class="console-prompt">user@game-dev:~$</span> 
+            <span class="console-text">contact --info halil</span>
+          </div>
+          <div class="console-line">
+            <span class="console-output">Processing request...</span>
+          </div>
+          <div class="console-line">
+            <span class="console-output">Name: Halil İbrahim Özdemir</span>
+          </div>
+          <div class="console-line">
+            <span class="console-output">Role: Game Developer / Computer Engineer</span>
+          </div>
+          <div class="console-line">
+            <span class="console-output">Email: <a href="mailto:hbrahim.ozdemir@gmail.com">hbrahim.ozdemir@gmail.com</a></span>
+          </div>
+          <div class="console-line">
+            <span class="console-output">Location: Ankara, Turkey</span>
+          </div>
+          <div class="console-line">
+            <span class="console-prompt">user@game-dev:~$</span> 
+            <span class="console-cursor"></span>
+          </div>
+        </div>
+        
+        <!-- Tetris Game View (Hidden by Default) -->
+        <div id="tetris-view" class="console-body tetris-container" style="display: none;">
+          <div class="tetris-board"></div>
+          <div class="tetris-sidebar">
+            <div class="tetris-next">
+              <h3>Next:</h3>
+              <div class="tetris-next-piece"></div>
+            </div>
+            <div class="tetris-score">
+              <h3>Score: <span id="tetris-score-value">0</span></h3>
+            </div>
+            <div class="tetris-level">
+              <h3>Level: <span id="tetris-level-value">1</span></h3>
+            </div>
+            <div class="tetris-lines">
+              <h3>Lines: <span id="tetris-lines-value">0</span></h3>
+            </div>
+            <div class="tetris-controls">
+              <h3>Controls:</h3>
+              <p>← → : Move</p>
+              <p>↑ : Rotate</p>
+              <p>↓ : Drop</p>
+              <p>Space : Hard Drop</p>
+              <p>P : Pause</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+      
+      <div class="contact__info">
+        <p>
+          If you have any questions, project inquiries, or just want to connect, feel free to reach out. I'm always open to new opportunities and collaborations in game development and software engineering.
+        </p>
+        <p>
+          
+        </p>
+        <a href="mailto:hbrahim.ozdemir@gmail.com" class="btn btn--neon">
+          <i class="fas fa-envelope"></i> Send Email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  
+      <!-- Tetris Game Script -->
+      <script src="tetris.js"></script>
   </main>
 
   <!-- Footer with Gaming Theme -->
