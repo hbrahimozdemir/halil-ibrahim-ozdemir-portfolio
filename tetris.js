@@ -495,6 +495,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  // Initialize the game when switching to Tetris view for the first time
-  tetrisToggle.dispatchEvent(new Event('click'));
 });
