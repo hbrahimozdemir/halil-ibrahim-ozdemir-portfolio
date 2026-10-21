@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hbrahimozdemir.github.io/halil-ibrahim-ozdemir-portfolio/sitemap.xml
