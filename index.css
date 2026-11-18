@@ -522,6 +522,7 @@ ul {
     align-items: flex-end;
     justify-content: center;
     transition: var(--transition-base);
+    cursor: pointer;
 }
 
 .profile-frame:hover {
@@ -917,13 +918,29 @@ body.light-mode .hero__brand img {
     box-shadow: var(--shadow-lg);
 }
 
+.about__avatar-link {
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 auto 2.5rem;
+    transition: var(--transition-base);
+    cursor: pointer;
+}
+
 .about__avatar-card img {
     border-radius: 50%;
     width: 160px;
     height: 160px;
     object-fit: cover;
-    margin: 0 auto 2.5rem;
+    margin: 0 auto;
     border: 4px solid var(--border-color);
+    transition: var(--transition-base);
+    display: block;
+}
+
+.about__avatar-link:hover img {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-glow);
 }
 
 .about__avatar-name {
